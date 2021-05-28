@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: demo
+  name: demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: demo
+    spec:
+      containers:
+      - image: eswaribala/esrepo:productapp
+        name: v1
+        resources: {}
+        env:
+            - name: MYSQL_URL
+              value: jdbc:mysql://mysql:3306/ericproddb?useSSL=false
+               
+
+status: {}
+--- 
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: demo
+  name: demo
+spec:
+  ports:
+  - name: 7076-7070
+    port: 7070
+    protocol: TCP
+    targetPort: 7076
+  selector:
+    app: demo
+  type: ClusterIP
+status:
+  loadBalancer: {}
