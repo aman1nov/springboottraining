@@ -1,0 +1,11 @@
+com\ericsson\productapi\queryresolvers\ProductQueryResolver.class
+com\ericsson\productapi\services\ProductPublisherService.class
+com\ericsson\productapi\models\Product.class
+com\ericsson\productapi\repositories\ProductRepository.class
+com\ericsson\productapi\configurations\SwaggerConfiguration.class
+com\ericsson\productapi\models\ProductType.class
+com\ericsson\productapi\controllers\ProductController.class
+com\ericsson\productapi\facades\StreamConfig.class
+com\ericsson\productapi\ProductapiApplication.class
+com\ericsson\productapi\facades\ProductStreams.class
+com\ericsson\productapi\services\ProductService.class
